@@ -46,3 +46,11 @@ class ProjectHelper:
                 description = cells[4].text
                 self.project_cache.append(Project(name=name, description=description))
         return list(self.project_cache)
+
+    def delete_project_by_name(self, name):
+        wd = self.app.wd
+        self.open_project_page()
+        wd.find_element(By.LINK_TEXT, name).click()
+        wd.find_element(By.XPATH, "//input[@value='Delete Project']").click()
+        wd.find_element(By.XPATH, "//input[@value='Delete Project']").click()
+        self.project_cache = None
