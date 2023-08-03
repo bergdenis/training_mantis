@@ -1,5 +1,5 @@
-from model.project import Project
 import random
+from model.project import Project
 
 
 def test_delete_random_contact(app):
