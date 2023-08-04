@@ -2,7 +2,6 @@ from model.project import Project
 
 
 def test_add_project(app, json_projects):
-    app.session.ensure_login("administrator", "root")
     project = json_projects
     old_projects = app.project.get_project_list()
     app.project.create_project(project)
