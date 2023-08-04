@@ -3,7 +3,6 @@ from model.project import Project
 
 
 def test_delete_random_contact(app):
-    app.session.ensure_login("administrator", "root")
     if len(app.project.get_project_list()) == 0:
         app.project.create_project(Project(name="Temp_name", description="Temp_description"))
     old_projects = app.project.get_project_list()
