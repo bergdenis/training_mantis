@@ -16,5 +16,9 @@
     "port": 4555,
     "username": "root",
     "password": "root"
+  },
+  "soap": {
+    "username": "administrator",
+    "password": "root"
   }
 }
