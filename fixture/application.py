@@ -28,6 +28,7 @@ class Application:
         self.config = config
         self.base_url = config['web']['base_Url']
         self.soap_url = config['web']['soapUrl']
+        self.base_url = base_url
 
     def is_valid(self):
         try:
